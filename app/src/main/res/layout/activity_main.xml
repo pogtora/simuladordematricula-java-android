@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cálculo da Mensalidade"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Aluno regular?" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/rbRegularSim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="regularClick"
+            android:text="Sim" />
+
+        <RadioButton
+            android:id="@+id/rbRegularNao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="regularClick"
+            android:text="Não" />
+    </RadioGroup>
+
+    <!-- RadioGroup define quais RadioButtons serão
+    mutuamente exclusívos, ou seja, onde só pode selecionar 1 -->
+    <RadioGroup
+        android:id="@+id/rgBolsa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Tem bolsa?" />
+
+        <RadioButton
+            android:id="@+id/rbBolsaSim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="bolsaClick"
+            android:text="Sim" />
+
+        <EditText
+            android:id="@+id/editBolsa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:hint="Digite o valor da bolsa"
+            android:inputType="number" />
+
+        <RadioButton
+            android:id="@+id/rbBolsaNao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="bolsaClick"
+            android:text="Não" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Disciplinas" />
+
+    <CheckBox
+        android:id="@+id/cbMovel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Computação Móvel (68h)"
+        android:onClick="calcularClick"/>
+
+    <CheckBox
+        android:id="@+id/cbBanco3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Banco de Dados III (51h)"
+        android:onClick="calcularClick" />
+
+    <CheckBox
+        android:id="@+id/cbMultimidia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sistemas Multimídia (51h)"
+        android:onClick="calcularClick" />
+
+    <CheckBox
+        android:id="@+id/cbComDados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comunicação de Dados (68h)"
+        android:onClick="calcularClick" />
+
+    <CheckBox
+        android:id="@+id/cbPython"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Programação Python (34h)"
+        android:onClick="calcularClick" />
+
+    <CheckBox
+        android:id="@+id/cbModelagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modelagem de Processo (51h)"
+        android:onClick="calcularClick" />
+
+    <CheckBox
+        android:id="@+id/cbProjeto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Projeto de Software (68h)"
+        android:onClick="calcularClick" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="calcularClick"
+        android:text="Calcular" />
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#0000FF"
+        android:text="Valor da mensalidade: R$0,00" />
+
+</LinearLayout>
